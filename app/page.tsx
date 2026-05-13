@@ -19,10 +19,7 @@ export default function Home() {
 
 
             <div className="w-full h-[7.5%] shrink-0">
-                <div>
-                    <Header />
-                </div>
-
+                {/*<Header /> */}
             </div>
 
 
