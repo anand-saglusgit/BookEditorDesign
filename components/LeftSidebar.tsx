@@ -100,10 +100,10 @@ export default function LeftSidebar() {
   return (
     <div
       className="w-full h-full flex flex-col items-center overflow-y-auto"
-      style={{ background: "#fcfcfc", borderRight: "1px solid rgba(255,255,255,0.07)", paddingTop: 4, paddingBottom: 4 }}
+      style={{ background: "#fcfcfc", borderRight: "1px solid rgb(223 223 223)", paddingTop: 4, paddingBottom: 4 }}
     >
       {/* Template */}
-      <div className="flex flex-col items-center p-2 mt-1 mb-1">
+      <div className="flex flex-col items-center p-1 mt-1 mb-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="white" fill-opacity="1"/>
@@ -118,13 +118,13 @@ export default function LeftSidebar() {
           </defs>
           </svg>
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Template
         </p>
       </div>
 
       {/* Text Active */}
-      <div className="flex flex-col items-center cursor-pointer p-2">
+      <div className="flex flex-col items-center cursor-pointer p-1">
         <div className="w-10 h-10 rounded-lg text-white flex items-center justify-center">         
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="#8051E0"/>
@@ -132,13 +132,13 @@ export default function LeftSidebar() {
           </svg>
 
         </div>
-        <p className="text-[12px] text-black mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-purple-500 mt-1">
           Text
         </p>
       </div>
 
       {/* Images */}
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -148,13 +148,13 @@ export default function LeftSidebar() {
           <path d="M18.3661 5.95033H11.0336C7.84863 5.95033 5.94988 7.84908 5.94988 11.0341V18.3666C5.94988 19.3203 6.11613 20.1516 6.43988 20.8516C7.19238 22.5141 8.80238 23.4503 11.0336 23.4503H18.3661C21.5511 23.4503 23.4499 21.5516 23.4499 18.3666V16.3628V11.0341C23.4499 7.84908 21.5511 5.95033 18.3661 5.95033ZM22.0236 15.1378C21.3411 14.5516 20.2386 14.5516 19.5561 15.1378L15.9161 18.2616C15.2336 18.8478 14.1311 18.8478 13.4486 18.2616L13.1511 18.0166C12.5299 17.4741 11.5411 17.4216 10.8411 17.8941L7.56863 20.0903C7.37613 19.6003 7.26238 19.0316 7.26238 18.3666V11.0341C7.26238 8.56658 8.56613 7.26283 11.0336 7.26283H18.3661C20.8336 7.26283 22.1374 8.56658 22.1374 11.0341V15.2341L22.0236 15.1378Z" fill="black" fill-opacity="0.3"/>
           </svg>
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Images
         </p>
       </div>
 
       {/* Subtitle */}
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -163,13 +163,13 @@ export default function LeftSidebar() {
           </svg>
 
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Subtitle
         </p>
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -180,13 +180,13 @@ export default function LeftSidebar() {
           </svg>
 
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Buttons
         </p>
       </div>
 
       {/* Elements */}
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -197,13 +197,13 @@ export default function LeftSidebar() {
           <path d="M5.03979 20.1592L7.3498 24.3591H11.9698L14.2798 20.1592L11.9698 15.9591H7.3498L5.03979 20.1592Z" fill="black" fill-opacity="0.3"/>
           </svg>
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Elements
         </p>
       </div>
 
       {/* Videos */}
-      <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -211,7 +211,7 @@ export default function LeftSidebar() {
           <path d="M7.90267 5.62928L11.7052 9.4318H5.11883C5.25323 8.62446 5.5751 7.85989 6.05857 7.1995C6.54204 6.53911 7.17365 6.0013 7.90267 5.62928ZM13.0137 5.04089H10.3089C10.142 5.04089 9.97518 5.04968 9.80832 5.05846L14.1817 9.4318H17.4046L13.0137 5.04089ZM19.0907 5.04089H15.5077L19.8986 9.4318H24.2808C24.075 8.20417 23.4406 7.08926 22.4903 6.2853C21.5401 5.48133 20.3355 5.0404 19.0907 5.04089ZM13.3666 19.6415L17.7575 17.2265C17.8954 17.1509 18.0104 17.0396 18.0905 16.9042C18.1707 16.7689 18.2129 16.6145 18.2129 16.4573C18.2129 16.3 18.1707 16.1456 18.0905 16.0103C18.0104 15.8749 17.8954 15.7636 17.7575 15.688L13.3666 13.273C13.2329 13.1994 13.0824 13.162 12.9298 13.1644C12.7772 13.1668 12.6279 13.2088 12.4966 13.2865C12.3652 13.3641 12.2563 13.4747 12.1807 13.6072C12.1051 13.7397 12.0653 13.8897 12.0653 14.0423V18.8723C12.0653 19.0248 12.1051 19.1748 12.1807 19.3073C12.2563 19.4399 12.3652 19.5504 12.4966 19.628C12.6279 19.7057 12.7772 19.7478 12.9298 19.7501C13.0824 19.7525 13.2329 19.7151 13.3666 19.6415ZM24.3598 11.1882V19.0918C24.3587 20.4889 23.8032 21.8285 22.8153 22.8164C21.8274 23.8043 20.4878 24.3598 19.0907 24.3609H10.3089C8.91178 24.3598 7.57221 23.8043 6.58431 22.8164C5.5964 21.8285 5.04091 20.4889 5.03979 19.0918V11.1882H24.3598Z" fill="black" fill-opacity="0.3"/>
           </svg>
         </div>
-        <p className="text-[12px] text-black-400 mt-1">
+        <p className="text-[clamp(10px,1.2vw,12px)] text-black-400 mt-1">
           Videos
         </p>
       </div>
