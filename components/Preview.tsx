@@ -27,7 +27,7 @@ export default function Preview() {
           onClick={() => setTab("layers")}
           className={`flex-1 text-[11px] py-1 transition ${
             tab === "layers"
-              ? "bg-purple-600 text-white"
+              ? "bg-[#8051E0] text-white"
               : "bg-[#2a2a3c] text-gray-300 hover:bg-[#34344a]"
           }`}
         >
@@ -39,7 +39,7 @@ export default function Preview() {
           onClick={() => setTab("pages")}
           className={`flex-1 text-[11px] py-1 transition ${
             tab === "pages"
-              ? "bg-purple-600 text-white"
+              ? "bg-[#8051E0] text-white"
               : "bg-[#2a2a3c] text-gray-300 hover:bg-[#34344a]"
           }`}
         >
@@ -58,16 +58,16 @@ export default function Preview() {
             {LAYERS.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between bg-[#f8f8f8] hover:bg-[#f4f4f4] rounded-md cursor-pointer border border-gray-500"
+                className="flex items-center justify-between bg-[#f8f8f8] hover:bg-[#f4f4f4] rounded-md cursor-pointer border border-[#e3dbdb]"
               >
                 <div className="flex items-center gap-2 rounded-xs overflow-hidden">
-                  <span className="bg-purple-400 text-xs px-2 py-2 items-center">⋮⋮</span>
+                  <span className="bg-[#8051E0] text-xs px-2 py-2 items-center text-white">⋮⋮</span>
                   <span className="text-[11px] text-gray-700">
                     {item}
                   </span>
                 </div>
 
-                <span className="text-gray-400 text-xs px-2">👁</span>
+                
               </div>
             ))}
 

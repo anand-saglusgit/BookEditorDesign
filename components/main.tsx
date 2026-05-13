@@ -198,7 +198,7 @@ export default function MainCanvas({ containerRef }: MainCanvasProps) {
       ref={containerRef}
       className="w-full h-full flex items-center justify-center relative overflow-auto"
       style={{
-        background: "repeating-conic-gradient(#1a1a2e 0% 25%, #1d1d30 0% 50%) 0 0 / 24px 24px",
+        background: "repeating-conic-gradient(#fff 0% 25%, #fff 0% 50%) 0 0 / 24px 24px",
       }}
     >
       {/* Size badge */}
