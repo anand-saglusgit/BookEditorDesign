@@ -6,7 +6,7 @@ import {
   Underline,
   AlignLeft,
   AlignCenter,
-  AlignRight,
+  AlignRight,  
   Type,
   Sparkles,
   ChevronDown,

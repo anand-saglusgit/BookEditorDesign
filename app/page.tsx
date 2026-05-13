@@ -19,14 +19,14 @@ export default function Home() {
 
 
             <div className="w-full h-[7.5%] shrink-0">
-                {/*<Header /> */}
+                <Header />
             </div>
 
 
             <div className="flex flex-1 min-h-0 overflow-hidden">
 
 
-                <div className="w-[5%] shrink-0 h-full">
+                <div className="w-[6%] shrink-0 h-full">
                     <LeftSidebar />
                 </div>
 
