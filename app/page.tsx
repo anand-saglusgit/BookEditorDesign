@@ -47,7 +47,6 @@ export default function Home() {
 
                             <div className="h-[8%] shrink-0 flex items-center justify-center">
                                 <CanvasHeaderBar />
-
                             </div>
 
 
@@ -56,11 +55,11 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className="w-[15%] shrink-0 h-full overflow-hidden">
+                        <div className="w-[18%] shrink-0 h-full overflow-hidden">
                             <Preview />
                         </div>
                     </div>
-                    <div className="h-[6%] shrink-0">
+                    <div className="h-[8%] shrink-0">
                         <EditorFooter />
                     </div>
                 </div>

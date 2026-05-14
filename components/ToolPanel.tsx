@@ -25,12 +25,13 @@ const TEMPLATES = [
 ];
 
 const FONTS = [
-  { title: "Welcome", sub: "Back !", bg: "rgb(179, 179, 179)" },
-  { title: "CALL", sub: "to action", bg: "#111111" },  
-  { title: "CALL", sub: "to action", bg: "#3a3838" },
-  { title: "Welcome", sub: "Back !", bg: "rgb(138, 133, 133)" },   
-  { title: "Welcome", sub: "Back !", bg: "rgb(82, 81, 81)" },
-  { title: "Welcome", sub: "Back !", bg: "rgb(179, 179, 179)" },
+  { title: "Welcome", sub: "Back !", bg: "rgb(244 244 244)"},
+  { title: "Stay Focused", sub: "Stay Strong", bg: "rgb(244 244 244)"},
+  { title: "Success", sub: "Begins Here", bg: "rgb(244 244 244)"},  
+  { title: "Push Your", sub: "Limits", bg: "rgb(244 244 244)"},
+  { title: "Dream Big,", sub: "Act Now", bg: "rgb(244 244 244)"},
+  { title: "Your", sub: "Future Starts", s_sub: "Today", bg: "rgb(244 244 244)"},
+  { title: "SHARE", sub: "", s_sub: "", bg: "rgb(244 244 244)"},
 ];
 
 export default function ToolPanel() {
@@ -39,11 +40,11 @@ export default function ToolPanel() {
   return (
     <div
       className="h-full flex flex-col overflow-hidden"
-      style={{ width: 240, background: "#fff", borderRight: "1px solid rgba(243, 0, 0, 0.07)" }}
+      style={{ width: 275, background: "#fff", borderRight: "1px solid rgba(243, 0, 0, 0.07)" }}
     >
       
       {/* Scrollable body */}
-      <div className="flex-1 overflow-y-auto scrollbar-hide" style={{ padding: "16px 12px" }}>      
+      <div className="flex-1 overflow-y-auto scrollbar-hide" style={{ padding: "16px 10px" }}>      
 
         {/* Text */}
         <div style={{ marginBottom: 16 }}>
@@ -76,14 +77,15 @@ export default function ToolPanel() {
             {FONTS.map((f, i) => (
               <button
                 key={i}
-                className="flex flex-col items-center justify-center"
+                className="flex flex-col items-left justify-center"
                 style={{
                   aspectRatio: "1", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)",
-                  background: f.bg, gap: 2,
+                  background: f.bg, gap: 2, textAlign:"left", padding:5,
                 }}
               >
-                <span style={{ fontSize: 18, fontWeight: 900, color: "red", lineHeight: 1 }}>{f.title}</span>
-                <span style={{ fontSize: 9, color: "#ffffff" }}>{f.sub}</span>
+                <span style={{ fontSize: 17, fontWeight: 400, color: "black", lineHeight: 1 }}>{f.title}</span>
+                <span style={{ fontSize: 17, fontWeight: 400, color: "#5C0484", }}>{f.sub}</span>
+                <span style={{ fontSize: 17, fontWeight: 400, color: "#5C0484", textAlign:"right"}}>{f.s_sub}</span>
               </button>
             ))}
           </div>

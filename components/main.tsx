@@ -101,7 +101,7 @@ function SummerPoster() {
         </div>
         <div
           style={{
-            fontSize: 62, fontWeight: 900, lineHeight: 0.95, letterSpacing: "0.04em",
+            fontSize: 55, fontWeight: 900, lineHeight: 0.95, letterSpacing: "0.04em",
             color: "#fef08a",
             WebkitTextStroke: "2.5px #1a1a1a",
             textShadow: "4px 4px 0 #1a1a1a",
