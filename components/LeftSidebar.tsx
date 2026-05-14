@@ -100,10 +100,10 @@ export default function LeftSidebar() {
   return (
     <div
       className="w-full h-full flex flex-col items-center overflow-y-auto"
-      style={{ background: "#fcfcfc", borderRight: "1px solid rgb(223 223 223)", paddingTop: 4, paddingBottom: 4 }}
+      style={{ background: "#fcfcfc", borderRight: "1px solid rgb(36, 36, 36)", paddingTop: 4, paddingBottom: 4 }}
     >
       {/* Template */}
-      <div className="flex flex-col items-center p-1 mt-1 mb-1">
+      <div className="flex flex-col items-center p-1 mt-1 mb-1 hover:bg-[#efefef] rounded">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="white" fill-opacity="1"/>
