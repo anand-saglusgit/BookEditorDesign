@@ -124,7 +124,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Text Active */}
-      <div className="flex flex-col items-center cursor-pointer p-1">
+      <div className="flex flex-col items-center cursor-pointer hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg text-white flex items-center justify-center">         
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="#8051E0"/>
@@ -138,7 +138,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Images */}
-      <div className="flex flex-col items-center p-1">
+      <div className="flex flex-col items-center hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -154,7 +154,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Subtitle */}
-      <div className="flex flex-col items-center p-1">
+      <div className="flex flex-col items-center hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -169,7 +169,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-col items-center p-1">
+      <div className="flex flex-col items-center hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -186,7 +186,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Elements */}
-      <div className="flex flex-col items-center p-1">
+      <div className="flex flex-col items-center hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
@@ -203,7 +203,7 @@ export default function LeftSidebar() {
       </div>
 
       {/* Videos */}
-      <div className="flex flex-col items-center p-1">
+      <div className="flex flex-col items-center hover:bg-[#efefef] rounded p-1">
         <div className="w-10 h-10 rounded-lg bg-[#fff] text-gray-300 flex items-center justify-center">
           <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="30" height="30" rx="6" fill="black" fill-opacity="0.05"/>
