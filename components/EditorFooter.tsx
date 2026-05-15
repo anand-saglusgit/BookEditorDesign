@@ -11,14 +11,14 @@ export default function EditorFooter() {
     <div className="w-full h-12 flex items-center justify-between px-4 bg-[#f3f4f8]">
 
       {/* LEFT: Zoom Slider */}
-      <div className="flex items-center gap-3 w-[193px]">
+      <div className="flex items-center gap-3 w-auto p-1 border border-[#e3e3e3] rounded-2xl">
 
         {/* Minus Button */}
         <button
           onClick={() => setZoom((prev) => Math.max(prev - 10, 10))}
-          className="w-6 h-6 flex items-center justify-center text-sm"
+          className="w-6 h-2 flex items-center justify-center text-sm"
         >
-          -
+          <span className="bg-[#7c3aec] text-white rounded-3xl w-6 h-6 items-center justify-between">-</span>
         </button>
 
         {/* Range Input */}
@@ -36,7 +36,7 @@ export default function EditorFooter() {
           onClick={() => setZoom((prev) => Math.min(prev + 10, 200))}
           className="w-6 h-6 flex items-center justify-center text-sm"
         >
-          +
+          <span className="bg-[#7c3aec] text-white rounded-3xl w-6 h-6 items-center justify-between">+</span>
         </button>
 
         {/* Zoom Percentage */}

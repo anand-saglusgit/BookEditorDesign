@@ -40,7 +40,7 @@ export default function ToolPanel() {
   return (
     <div
       className="h-full flex flex-col overflow-hidden"
-      style={{ width: 275, background: "#fff", borderRight: "1px solid rgba(243, 0, 0, 0.07)" }}
+      style={{ background: "#fff", borderRight: "1px solid rgba(243, 0, 0, 0.07)" }}
     >
       
       {/* Scrollable body */}

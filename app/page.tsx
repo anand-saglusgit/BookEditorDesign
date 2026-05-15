@@ -26,17 +26,17 @@ export default function Home() {
             <div className="flex flex-1 min-h-0 overflow-hidden">
 
 
-                <div className="w-[6%] shrink-0 h-full">
+                <div className="w-[7.51%] shrink-0 h-full">
                     <LeftSidebar />
                 </div>
 
 
-                <div className={`transition-all duration-300 h-full shrink-0 `}>
+                <div className="w-[20%] transition-all duration-300 h-full shrink-0 ">
                     <ToolPanel />
                 </div>
 
 
-                <div className={`flex flex-col flex-1 min-w-0 min-h-0 transition-all duration-300 `}>
+                <div className="w-[50%] flex flex-col flex-1 min-w-0 min-h-0 transition-all duration-300">
 
 
                     <div className="flex flex-1 min-h-0 overflow-hidden">
@@ -55,7 +55,7 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className="w-[18%] shrink-0 h-full overflow-hidden">
+                        <div className="w-[22.26%] shrink-0 h-full overflow-hidden">
                             <Preview />
                         </div>
                     </div>
