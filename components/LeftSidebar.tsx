@@ -5,17 +5,7 @@ const active =
 const inactive =
   "bg-white text-gray-400 hover:bg-[#8051E0] hover:text-white";
 const NAV = [
-  {
-    id: "Design",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <rect x="3" y="3" width="7" height="7" rx="1.5" />
-        <rect x="14" y="3" width="7" height="7" rx="1.5" />
-        <rect x="3" y="14" width="7" height="7" rx="1.5" />
-        <rect x="14" y="14" width="7" height="7" rx="1.5" />
-      </svg>
-    ),
-  },
+ 
   {
     id: "Elements",
     icon: (
@@ -36,26 +26,7 @@ const NAV = [
       </svg>
     ),
   },
-  {
-    id: "Brand",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M12 2L2 7l10 5 10-5-10-5z" />
-        <path d="M2 17l10 5 10-5" />
-        <path d="M2 12l10 5 10-5" />
-      </svg>
-    ),
-  },
-  {
-    id: "Uploads",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-        <polyline points="17 8 12 3 7 8" />
-        <line x1="12" y1="3" x2="12" y2="15" />
-      </svg>
-    ),
-  },
+
   {
     id: "Photos",
     icon: (
@@ -75,167 +46,60 @@ const NAV = [
       </svg>
     ),
   },
-  {
-    id: "Background",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <rect x="2" y="2" width="20" height="20" rx="3" />
-        <path d="M2 8h20M8 2v20" />
-      </svg>
-    ),
-  },
-  {
-    id: "Apps",
-    icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <rect x="2" y="2" width="9" height="9" rx="1.5" />
-        <rect x="13" y="2" width="9" height="9" rx="1.5" />
-        <rect x="2" y="13" width="9" height="9" rx="1.5" />
-        <rect x="13" y="13" width="9" height="9" rx="1.5" />
-      </svg>
-    ),
-  },
 ];
 
 export default function LeftSidebar() {
   const [active, setActive] = useState("Elements");
 
   return (
-    <div
-      className="w-full h-full flex flex-col items-center overflow-y-auto"
-      style={{ background: "#fcfcfc", borderRight: "1px solid rgb(241, 241, 241)", paddingTop: 4, paddingBottom: 4 }}
-    >
+    <div className="w-full h-full flex flex-col items-center overflow-y-auto kd-LeftSidebar-outerpanel">
       
       {/* Template */}
-<div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
-
-  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
-
-    <svg
-      width="30"
-      height="30"
-      viewBox="0 0 30 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-
-      {/* Outer Border */}
-      <rect
-        x="0.42"
-        y="0.42"
-        width="29.16"
-        height="29.16"
-        rx="5.58"
-        className="stroke-black/15 group-hover:stroke-transparent transition-colors"
-        strokeWidth="0.84"
-      />
-
-      <g clipPath="url(#clip0_69_3142)">
-        <path
-          d="M13.0376 7.21986V22.1824C13.0376 23.5596 11.9211 24.6761 10.5438 24.6761H7.21881C5.84155 24.6761 4.72506 23.5596 4.72506 22.1824V7.21986C4.72506 5.8426 5.84155 4.72611 7.21881 4.72611H10.5438C11.9211 4.72611 13.0376 5.8426 13.0376 7.21986ZM22.1813 17.7767H17.1938C15.8165 17.7767 14.7001 18.8932 14.7001 20.2705V22.1824C14.7001 23.5596 15.8165 24.6761 17.1938 24.6761H22.1813C23.5586 24.6761 24.6751 23.5596 24.6751 22.1824V20.2705C24.6751 18.8932 23.5586 17.7767 22.1813 17.7767ZM22.1813 4.72611H17.1938C15.8165 4.72611 14.7001 5.8426 14.7001 7.21986V13.6205C14.7001 14.9977 15.8165 16.1142 17.1938 16.1142H22.1813C23.5586 16.1142 24.6751 14.9977 24.6751 13.6205V7.21986C24.6751 5.8426 23.5586 4.72611 22.1813 4.72611Z"
-          className="fill-gray-400 transition-colors group-hover:fill-white"
-        />
-      </g>
-
-    </svg>
-
-  </div>
-
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
-    Template
-  </p>
-
-</div>
+      <div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
+          <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Outer Border */}
+              <rect x="0.42" y="0.42" width="29.16" height="29.16" rx="5.58" className="stroke-black/15 group-hover:stroke-transparent transition-colors" strokeWidth="0.84" />
+              <g clipPath="url(#clip0_69_3142)">
+                <path d="M13.0376 7.21986V22.1824C13.0376 23.5596 11.9211 24.6761 10.5438 24.6761H7.21881C5.84155 24.6761 4.72506 23.5596 4.72506 22.1824V7.21986C4.72506 5.8426 5.84155 4.72611 7.21881 4.72611H10.5438C11.9211 4.72611 13.0376 5.8426 13.0376 7.21986ZM22.1813 17.7767H17.1938C15.8165 17.7767 14.7001 18.8932 14.7001 20.2705V22.1824C14.7001 23.5596 15.8165 24.6761 17.1938 24.6761H22.1813C23.5586 24.6761 24.6751 23.5596 24.6751 22.1824V20.2705C24.6751 18.8932 23.5586 17.7767 22.1813 17.7767ZM22.1813 4.72611H17.1938C15.8165 4.72611 14.7001 5.8426 14.7001 7.21986V13.6205C14.7001 14.9977 15.8165 16.1142 17.1938 16.1142H22.1813C23.5586 16.1142 24.6751 14.9977 24.6751 13.6205V7.21986C24.6751 5.8426 23.5586 4.72611 22.1813 4.72611Z"
+                  className="fill-gray-400 transition-colors group-hover:fill-white"/>
+              </g>
+            </svg>
+        </div>
+        <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">Template</p>
+      </div>
          
       {/* Text */}
-<div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
-
-  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
-
-    <svg
-      width="30"
-      height="30"
-      viewBox="0 0 30 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-
-      {/* Border */}
-      <rect
-        x="0.42"
-        y="0.42"
-        width="29.16"
-        height="29.16"
-        rx="5.58"
-        className="stroke-black/15 group-hover:stroke-transparent transition-colors"
-        strokeWidth="0.84"
-      />
-
-      {/* Icon */}
-      <path
-        d="M21.4128 12.0502V8.16482C21.4128 7.97205 21.2566 7.81578 21.0634 7.81578H14.7002H8.33704C8.14386 7.81578 7.98759 7.97205 7.98759 8.16482V12.0502C7.98759 12.2434 8.14386 12.3997 8.33704 12.3997H10.1926C10.3854 12.3997 10.5416 12.2434 10.5416 12.0502V10.7193C10.5416 10.5261 10.6983 10.3698 10.8911 10.3698H13.0735C13.2667 10.3698 13.423 10.5261 13.423 10.7193V20.3227C13.423 20.5159 13.2667 20.6721 13.0735 20.6721H12.1191C11.9259 20.6721 11.7696 20.8284 11.7696 21.0216V22.8771C11.7696 23.0699 11.9259 23.2262 12.1191 23.2262H14.7002H17.2813C17.4745 23.2262 17.6308 23.0699 17.6308 22.8771V21.0216C17.6308 20.8284 17.4745 20.6721 17.2813 20.6721H16.3269C16.1337 20.5159 15.9774 20.5159 15.9774 20.3227V10.7193C15.9774 10.5261 16.1337 10.3698 16.3269 10.3698H18.5093C18.7021 10.3698 18.8588 10.5261 18.8588 10.7193V12.0502C18.8588 12.2434 19.0151 12.3997 19.2078 12.3997H21.0634C21.2566 12.3997 21.4128 12.2434 21.4128 12.0502Z"
-        className="fill-gray-400 transition-colors group-hover:fill-white"
-      />
-
-    </svg>
-
-  </div>
-
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
-    Text
-  </p>
-
-</div>
+      <div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
+        <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Border */}
+            <rect x="0.42" y="0.42" width="29.16" height="29.16" rx="5.58" className="stroke-black/15 group-hover:stroke-transparent transition-colors" strokeWidth="0.84" />
+            {/* Icon */}
+            <path d="M21.4128 12.0502V8.16482C21.4128 7.97205 21.2566 7.81578 21.0634 7.81578H14.7002H8.33704C8.14386 7.81578 7.98759 7.97205 7.98759 8.16482V12.0502C7.98759 12.2434 8.14386 12.3997 8.33704 12.3997H10.1926C10.3854 12.3997 10.5416 12.2434 10.5416 12.0502V10.7193C10.5416 10.5261 10.6983 10.3698 10.8911 10.3698H13.0735C13.2667 10.3698 13.423 10.5261 13.423 10.7193V20.3227C13.423 20.5159 13.2667 20.6721 13.0735 20.6721H12.1191C11.9259 20.6721 11.7696 20.8284 11.7696 21.0216V22.8771C11.7696 23.0699 11.9259 23.2262 12.1191 23.2262H14.7002H17.2813C17.4745 23.2262 17.6308 23.0699 17.6308 22.8771V21.0216C17.6308 20.8284 17.4745 20.6721 17.2813 20.6721H16.3269C16.1337 20.5159 15.9774 20.5159 15.9774 20.3227V10.7193C15.9774 10.5261 16.1337 10.3698 16.3269 10.3698H18.5093C18.7021 10.3698 18.8588 10.5261 18.8588 10.7193V12.0502C18.8588 12.2434 19.0151 12.3997 19.2078 12.3997H21.0634C21.2566 12.3997 21.4128 12.2434 21.4128 12.0502Z"
+              className="fill-gray-400 transition-colors group-hover:fill-white" />
+          </svg>
+        </div>
+        <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">Text</p>
+      </div>
 
       {/* Images */}
-<div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
-
-  <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
-
-    <svg
-      width="30"
-      height="30"
-      viewBox="0 0 30 30"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-
-      {/* Border */}
-      <rect
-        x="0.42"
-        y="0.42"
-        width="29.16"
-        height="29.16"
-        rx="5.58"
-        className="stroke-black/15 group-hover:stroke-transparent transition-colors"
-        strokeWidth="0.84"
-      />
-
-      {/* Icon Paths */}
-      <path
-        d="M6.45679 20.8347L6.43929 20.8522C6.20304 20.3359 6.05429 19.7497 5.99304 19.1022C6.05429 19.7409 6.22054 20.3184 6.45679 20.8347Z"
-        className="fill-gray-400 transition-colors group-hover:fill-white"
-      />
-
-      <path
-        d="M12.0749 13.2833C13.225 13.2833 14.1573 12.3509 14.1573 11.2008C14.1573 10.0506 13.225 9.11827 12.0749 9.11827C10.9247 9.11827 9.99235 10.0506 9.99235 11.2008C9.99235 12.3509 10.9247 13.2833 12.0749 13.2833Z"
-        className="fill-gray-400 transition-colors group-hover:fill-white"
-      />
-
-      <path
-        d="M18.3661 5.95033H11.0336C7.84863 5.95033 5.94988 7.84908 5.94988 11.0341V18.3666C5.94988 19.3203 6.11613 20.1516 6.43988 20.8516C7.19238 22.5141 8.80238 23.4503 11.0336 23.4503H18.3661C21.5511 23.4503 23.4499 21.5516 23.4499 18.3666V16.3628V11.0341C23.4499 7.84908 21.5511 5.95033 18.3661 5.95033ZM22.0236 15.1378C21.3411 14.5516 20.2386 14.5516 19.5561 15.1378L15.9161 18.2616C15.2336 18.8478 14.1311 18.8478 13.4486 18.2616L13.1511 18.0166C12.5299 17.4741 11.5411 17.4216 10.8411 17.8941L7.56863 20.0903C7.37613 19.6003 7.26238 19.0316 7.26238 18.3666V11.0341C7.26238 8.56658 8.56613 7.26283 11.0336 7.26283H18.3661C20.8336 7.26283 22.1374 8.56658 22.1374 11.0341V15.2341L22.0236 15.1378Z"
-        className="fill-gray-400 transition-colors group-hover:fill-white"
-      />
-
-    </svg>
-
-  </div>
-
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
-    Images
-  </p>
-
-</div>
+      <div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
+        <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center transition-colors group-hover:bg-[#8051E0]">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Border */}
+            <rect x="0.42" y="0.42" width="29.16" height="29.16" rx="5.58" className="stroke-black/15 group-hover:stroke-transparent transition-colors" strokeWidth="0.84" />
+            {/* Icon Paths */}
+            <path d="M6.45679 20.8347L6.43929 20.8522C6.20304 20.3359 6.05429 19.7497 5.99304 19.1022C6.05429 19.7409 6.22054 20.3184 6.45679 20.8347Z"
+              className="fill-gray-400 transition-colors group-hover:fill-white"/>
+              <path d="M12.0749 13.2833C13.225 13.2833 14.1573 12.3509 14.1573 11.2008C14.1573 10.0506 13.225 9.11827 12.0749 9.11827C10.9247 9.11827 9.99235 10.0506 9.99235 11.2008C9.99235 12.3509 10.9247 13.2833 12.0749 13.2833Z"
+              className="fill-gray-400 transition-colors group-hover:fill-white"/>
+            <path d="M18.3661 5.95033H11.0336C7.84863 5.95033 5.94988 7.84908 5.94988 11.0341V18.3666C5.94988 19.3203 6.11613 20.1516 6.43988 20.8516C7.19238 22.5141 8.80238 23.4503 11.0336 23.4503H18.3661C21.5511 23.4503 23.4499 21.5516 23.4499 18.3666V16.3628V11.0341C23.4499 7.84908 21.5511 5.95033 18.3661 5.95033ZM22.0236 15.1378C21.3411 14.5516 20.2386 14.5516 19.5561 15.1378L15.9161 18.2616C15.2336 18.8478 14.1311 18.8478 13.4486 18.2616L13.1511 18.0166C12.5299 17.4741 11.5411 17.4216 10.8411 17.8941L7.56863 20.0903C7.37613 19.6003 7.26238 19.0316 7.26238 18.3666V11.0341C7.26238 8.56658 8.56613 7.26283 11.0336 7.26283H18.3661C20.8336 7.26283 22.1374 8.56658 22.1374 11.0341V15.2341L22.0236 15.1378Z"
+              className="fill-gray-400 transition-colors group-hover:fill-white"/>
+          </svg>
+        </div>
+        <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">Images</p>
+      </div>
 
       {/* Subtitle */}
 <div className="flex flex-col items-center p-1 mt-1 mb-1 cursor-pointer group">
@@ -271,7 +135,7 @@ export default function LeftSidebar() {
 
   </div>
 
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
+  <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">
     Subtitle
   </p>
 
@@ -321,7 +185,7 @@ export default function LeftSidebar() {
 
   </div>
 
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
+  <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">
     Buttons
   </p>
 
@@ -340,7 +204,8 @@ export default function LeftSidebar() {
             <path d="M5.03979 20.1592L7.3498 24.3591H11.9698L14.2798 20.1592L11.9698 15.9591H7.3498L5.03979 20.1592Z" className="fill-gray-400 transition-colors group-hover:fill-white"/>
           </svg>
         </div>
-        <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">Elements</p>
+        <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">
+          Elements</p>
       </div>
       
       {/* Videos */}
@@ -377,7 +242,7 @@ export default function LeftSidebar() {
 
   </div>
 
-  <p className="text-[clamp(10px,1.2vw,12px)] text-gray-400 mt-1 transition-colors group-hover:text-[#8051E0]">
+  <p className="text-[clamp(10px,1.2vw,12px)] text-[8px] font-medium text-gray-500 mt-1 transition-colors group-hover:text-[#8051E0]">
     Videos
   </p>
 

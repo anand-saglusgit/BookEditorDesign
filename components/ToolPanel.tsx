@@ -11,10 +11,10 @@ const SHAPES = [
 ];
 
 const TEXT_STYLES = [
-  { label: "Add Heading", fontSize: 16, fontWeight: 700, bg: "#F3F4F7", color: "black" },
-  { label: "Add Sub Heading", fontSize: 13, fontWeight: 600, color: "#8051E0" },
-  { label: "Add Body Text", fontSize: 11, fontWeight: 400, color: "#9ca3af" },
-  { label: "#Pagination", fontSize: 11, fontWeight: 400, color: "#9ca3af" },
+  { label: "Add Heading", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 16, fontWeight: 700, bg: "#F3F4F7", color: "black" },
+  { label: "Add Sub Heading", fontFamily: "'Poetsen One', sans-serif", fontSize: 13, fontWeight: 600, color: "#8051E0" },
+  { label: "Add Body Text", fontFamily: "'Playpen Sans', cursive", fontSize: 11, fontWeight: 400, color: "#9ca3af" },
+  { label: "#Pagination", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: 11, fontWeight: 400, color: "#9ca3af" },
 ];
 
 const TEMPLATES = [
@@ -38,32 +38,24 @@ export default function ToolPanel() {
   const [search, setSearch] = useState("");
 
   return (
-    <div
-      className="h-full flex flex-col overflow-hidden"
-      style={{ background: "#fff", borderRight: "1px solid rgba(243, 0, 0, 0.07)" }}
-    >
+    <div className="h-full flex flex-col overflow-hidden kd-toolpanel-borderRight">
       
       {/* Scrollable body */}
-      <div className="flex-1 overflow-y-auto scrollbar-hide" style={{ padding: "16px 10px" }}>      
+      <div className="flex-1 overflow-y-auto scrollbar-hide kd-scrollbody-pd_xy">      
 
         {/* Text */}
-        <div style={{ marginBottom: 16 }}>
-          <div className="flex items-center justify-between" style={{ marginBottom: 10 }}>
-            <span className="text-black/80" style={{ fontSize: 13, fontWeight: 600, textTransform: "capitalize", letterSpacing: "0.08em" }}>Text</span>
+        <div className="mb-3">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-black/80 kd-font-jakarta tx-[13px] font-semibold capitalize tracking-[0.08em]">Text</span>
           </div>
           <hr className="w-full border-t border-gray-200 mb-2" />
-            <span className="text-black/100" style={{ fontSize: 10, fontWeight: 500, textTransform: "capitalize", letterSpacing: "0.1em" }}>Default Text Styles</span>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            <span className="text-black/100 kd-font-jakarta text-[10px] font-medium capitalize tracking-[0.1em]">Default Text Styles</span>
+          <div className="flex flex-col gap-1">
             {TEXT_STYLES.map((t) => (
-              <button
+              <button                                
                 key={t.label}
-                className="text-center transition-all "
-                style={{
-                  padding: "5px", borderRadius: 7,margin:1,
-                  background: "rgb(230, 230, 230)", border: "1px solid rgb(230, 230, 230)",
-                  fontSize: t.fontSize, fontWeight: t.fontWeight, color: t.color,
-                }}
-              >
+                className="text-center transition-all kd-textStyle"
+                style={{fontSize: t.fontSize, fontWeight: t.fontWeight, color: t.color}} >
                 {t.label}
               </button>
             ))}
@@ -73,16 +65,12 @@ export default function ToolPanel() {
         
         {/* Font combinations */}
         <div>          
-          <div className="grid grid-cols-2" style={{ gap: 6 }}>
+          <div className="grid grid-cols-2 gap-[6px]">
             {FONTS.map((f, i) => (
               <button
                 key={i}
-                className="flex flex-col items-left justify-center"
-                style={{
-                  aspectRatio: "1", borderRadius: 8, border: "1px solid rgba(255,255,255,0.1)",
-                  background: f.bg, gap: 2, textAlign:"left", padding:5,
-                }}
-              >
+                className="flex flex-col items-left justify-center font-abel kd-textFontStyle"
+                style={{ background: f.bg}}>
                 <span style={{ fontSize: 17, fontWeight: 400, color: "black", lineHeight: 1 }}>{f.title}</span>
                 <span style={{ fontSize: 17, fontWeight: 400, color: "#5C0484", }}>{f.sub}</span>
                 <span style={{ fontSize: 17, fontWeight: 400, color: "#5C0484", textAlign:"right"}}>{f.s_sub}</span>
@@ -90,7 +78,6 @@ export default function ToolPanel() {
             ))}
           </div>
         </div>
-
       </div>
     </div>
   );

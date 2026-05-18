@@ -18,25 +18,23 @@ export default function Home() {
         <div className="w-full h-screen overflow-hidden flex flex-col">
 
 
-            <div className="w-full h-[7.5%] shrink-0">
+            <div className="w-full h-[6.5%] shrink-0">
                 <Header />
             </div>
 
-
             <div className="flex flex-1 min-h-0 overflow-hidden">
 
-
-                <div className="w-[7.51%] shrink-0 h-full">
+                <div className="w-[4.25%] shrink-0 h-full">
                     <LeftSidebar />
                 </div>
 
 
-                <div className="w-[20%] transition-all duration-300 h-full shrink-0 ">
+                <div className="w-[21.75%] transition-all duration-300 h-full shrink-0 ">
                     <ToolPanel />
                 </div>
 
 
-                <div className="w-[50%] flex flex-col flex-1 min-w-0 min-h-0 transition-all duration-300">
+                <div className="w-[61.50%] flex flex-col flex-1 min-w-0 min-h-0 transition-all duration-300">
 
 
                     <div className="flex flex-1 min-h-0 overflow-hidden">
@@ -55,11 +53,11 @@ export default function Home() {
                             </div>
 
                         </div>
-                        <div className="w-[22.26%] shrink-0 h-full overflow-hidden">
+                        <div className="w-[12.50%] shrink-0 h-full overflow-hidden">
                             <Preview />
                         </div>
                     </div>
-                    <div className="h-[8%] shrink-0">
+                    <div className="h-[35px] shrink-0">
                         <EditorFooter />
                     </div>
                 </div>

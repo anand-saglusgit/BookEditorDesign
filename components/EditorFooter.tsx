@@ -9,51 +9,35 @@ export default function EditorFooter() {
 
   return (
     <div className="w-full h-12 flex items-center justify-between px-4 bg-[#f3f4f8]">
-
       {/* LEFT: Zoom Slider */}
-      <div className="flex items-center gap-3 w-auto p-1 border border-[#e3e3e3] rounded-2xl">
-
-        {/* Minus Button */}
-        <button
-          onClick={() => setZoom((prev) => Math.max(prev - 10, 10))}
-          className="w-6 h-2 flex items-center justify-center text-sm"
-        >
-          <span className="bg-[#7c3aec] text-white rounded-3xl w-6 h-6 items-center justify-between">-</span>
+      <div className="flex items-center gap-2 w-auto border border-[#e3e3e3] rounded-2xl mb-3">
+       {/* Minus Button */}
+        <button onClick={() => setZoom((prev) => Math.max(prev - 10, 10))} className="w-6 h-6 flex items-center justify-center">
+          <span className="bg-[#7c3aec] text-white rounded-full w-5 h-5 flex items-center justify-center leading-none text-sm">
+            -
+          </span>
         </button>
 
         {/* Range Input */}
-        <input
-          type="range"
-          min="10"
-          max="200"
-          value={zoom}
-          onChange={(e) => setZoom(Number(e.target.value))}
-          className="w-full h-1 accent-purple-500 cursor-pointer"
-        />
+        <input type="range" min="10" max="200" value={zoom} onChange={(e) => setZoom(Number(e.target.value))} className="w-full h-1 accent-purple-500 cursor-pointer"/>
 
         {/* Plus Button */}
-        <button
-          onClick={() => setZoom((prev) => Math.min(prev + 10, 200))}
-          className="w-6 h-6 flex items-center justify-center text-sm"
-        >
-          <span className="bg-[#7c3aec] text-white rounded-3xl w-6 h-6 items-center justify-between">+</span>
+        <button onClick={() => setZoom((prev) => Math.min(prev + 10, 200))} className="w-6 h-6 flex items-center justify-center" >
+          <span className="bg-[#7c3aec] text-white rounded-full w-5 h-5 flex items-center justify-center leading-none text-sm">
+            +
+          </span>
         </button>
-
         {/* Zoom Percentage */}
-        <span className="text-xs text-gray-600 w-10">
-          {zoom}%
-        </span>
-
+        <span className="text-[10px] text-gray-800 w-10 kd-font-jakarta">{zoom}%</span>
       </div>
 
       {/* RIGHT: Page Controls */}
-      <div className="flex items-center">
-
+      <div className="flex items-center mb-3">
         {/* Grid Icon */}
         <button className="p-2 hover:bg-gray-200 rounded-md">
           <svg
-            width="15"
-            height="15"
+            width="12"
+            height="12"
             viewBox="0 0 22 22"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -82,32 +66,23 @@ export default function EditorFooter() {
         </button>
 
         {/* Page Selector */}
-        <div className="flex items-center gap-1 text-xs bg-white rounded-md overflow-hidden">
-
+        <div className="flex items-center text-xs bg-white rounded-md overflow-hidden kd-font-jakarta">
           {/* Page Label */}
-          <span className="bg-[#e5e4e4] text-black p-1 font-medium text-xs">
-            Page
-          </span>
-
+          <span className="bg-[#e5e4e4] text-black p-1 font-medium text-[10px]">Page</span>
           {/* Select */}
           <select
             value={page}
             onChange={(e) => setPage(e.target.value)}
-            className="bg-transparent outline-none text-gray-800 p-1 text-xs"
+            className="bg-transparent outline-none text-gray-800 p-1 text-[10px]-500 kd-font-jakarta"
           >
             <option value="01">01</option>
             <option value="02">02</option>
             <option value="03">03</option>
             <option value="04">04</option>
           </select>
-
         </div>
-
         {/* Dynamic Page Count */}
-        <span className="text-xs text-gray-500 px-1">
-        of {page}/{totalPages}
-        </span>
-
+        <span className="text-[10px] text-gray-600 px-1 kd-font-jakarta"> of {page}/{totalPages}</span>
       </div>
     </div>
   );
