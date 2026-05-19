@@ -245,9 +245,7 @@ textarea.kd-border-primary:focus {
 /* LeftSidebar.tsx file Css */
 .kd-LeftSidebar-outerpanel{
   background: #fcfcfc;
-  border-right: 1px solid rgb(241, 241, 241);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  border-right: 1px solid rgb(241, 241, 241);  
   overflow: hidden;
 }
 
@@ -261,3 +259,58 @@ textarea.kd-border-primary:focus {
 }
 
 /*Editor Footer Tsx file CSS*/
+/* =========================
+   KD RANGE SLIDER
+========================= */
+
+.kd-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 106px;
+  height: 4px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Track */
+.kd-range-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.kd-range-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+/* Slider Button / Thumb */
+.kd-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ffffff; /* white button */
+  border: 2px solid #8051E0;
+  cursor: pointer;
+  margin-top: -5px;
+  transition: 0.2s ease;
+}
+
+.kd-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.05);
+}
+
+/* Firefox */
+.kd-range-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  background-color: #ffffff; /* white button */
+  border: 2px solid #8051E0;
+  cursor: pointer;
+}
