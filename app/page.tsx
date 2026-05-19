@@ -18,7 +18,7 @@ export default function Home() {
         <div className="w-full h-screen overflow-hidden flex flex-col">
 
 
-            <div className="w-full h-[6.5%] shrink-0">
+            <div className="w-full h-[41px] shrink-0">
                 <Header />
             </div>
 
