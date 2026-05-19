@@ -24,10 +24,15 @@ export default function Header() {
       <div className="flex items-center gap-1">
         {/* Undo */}
         <button className="kd-purple-btn kd-icon-btn">
-          <svg  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" >
+          {/* <svg  width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" >
             <path d="M9 14L4 9L9 4" />
             <path d="M20 20V13C20 10.7909 18.2091 9 16 9H4" />
+          </svg> */}
+
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.59067 1.70083H6.42539C7.62829 1.70083 8.78193 2.17868 9.63251 3.02926C10.4831 3.87984 10.9609 5.03347 10.9609 6.23638C10.9609 7.43928 10.4831 8.59291 9.63251 9.44349C8.78193 10.2941 7.62829 10.7719 6.42539 10.7719H1.13392V8.50415H6.42539C7.02684 8.50415 7.60366 8.26523 8.02895 7.83993C8.45424 7.41465 8.69316 6.83783 8.69316 6.23638C8.69316 5.63493 8.45424 5.05811 8.02895 4.63282C7.60366 4.20753 7.02684 3.9686 6.42539 3.9686H3.59067V5.66943L3.24249e-05 2.83472L3.59067 0V1.70083Z" fill="#6F48D9"/>
           </svg>
+
         </button>
 
         {/* Redo */}
