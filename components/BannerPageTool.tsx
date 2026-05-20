@@ -3,12 +3,6 @@
 "use client";
 
 import React from "react";
-import {
-  ChevronUp,
-  ChevronDown,
-  CopyPlus,
-  Trash2,
-} from "lucide-react";
 
 export default function BannerPageTool() {
   return (
@@ -24,12 +18,17 @@ export default function BannerPageTool() {
         
         {/* Up */}
         <button className="hover:text-black transition">
-          <ChevronUp size={18} strokeWidth={2.2} />
+          <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.76795 0.208435C4.04586 -0.0694784 4.49719 -0.0694784 4.77511 0.208435L8.3324 3.76573C8.61031 4.04364 8.61031 4.49497 8.3324 4.77289C8.05449 5.0508 7.60316 5.0508 7.32524 4.77289L4.27042 1.71806L1.21559 4.77066C0.93768 5.04858 0.486348 5.04858 0.208435 4.77066C-0.0694784 4.49275 -0.0694784 4.04142 0.208435 3.7635L3.76573 0.206212L3.76795 0.208435Z" fill="#D4D4D4"/>
+          </svg>
         </button>
 
         {/* Down */}
         <button className="hover:text-black transition">
-          <ChevronDown size={18} strokeWidth={2.2} />
+          <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.77288 4.77277C4.49497 5.05068 4.04364 5.05068 3.76572 4.77277L0.208433 1.21547C-0.0694805 0.93756 -0.0694805 0.486229 0.208433 0.208315C0.486346 -0.0695984 0.937678 -0.0695984 1.21559 0.208315L4.27042 3.26314L7.32524 0.210539C7.60315 -0.0673743 8.05448 -0.0673743 8.3324 0.210539C8.61031 0.488453 8.61031 0.939785 8.3324 1.2177L4.77511 4.77499L4.77288 4.77277Z" fill="#d4d4d4"/>
+          </svg>
+
         </button>
 
         {/* Duplicate */}
