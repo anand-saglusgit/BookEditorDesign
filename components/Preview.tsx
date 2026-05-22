@@ -41,7 +41,7 @@ export default function Preview() {
               whitespace-nowrap
               ${
                 tab === "pages"
-                  ? "bg-[#8051E0] text-white shadow-sm"
+                  ? "bg-[var(--kd-bg-secondary)] text-white shadow-sm"
                   : "bg-transparent text-gray-600 hover:bg-white"
               }
             `}
@@ -83,7 +83,7 @@ export default function Preview() {
               whitespace-nowrap
               ${
                 tab === "layers"
-                  ? "bg-[#8051E0] text-white shadow-sm"
+                  ? "bg-[var(--kd-bg-secondary)] text-white shadow-sm"
                   : "bg-transparent text-gray-600 hover:bg-white"
               }
             `}
@@ -142,7 +142,7 @@ export default function Preview() {
                   cursor-pointer
                   border
                   border-[#0000001A]
-                  hover:border-[#8051E0]/60
+                  hover:border-[var(--kd-bg-secondary)]/60
                   transition-all
                   duration-200
                   overflow-hidden
@@ -152,7 +152,7 @@ export default function Preview() {
                   {/* LEFT ICON */}
                   <span
                     className="
-                      bg-[#8051E0]
+                      bg-[var(--kd-bg-secondary)]
                       w-[26px]
                       h-[26px]
                       flex

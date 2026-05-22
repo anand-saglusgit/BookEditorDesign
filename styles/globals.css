@@ -2,7 +2,7 @@
 
 :root {
   --kd-bg-primary: #ffffff;
-  --kd-bg-secondary: #7069e8;
+  --kd-bg-secondary: #7069e8;  
   --kd-bg-tertiary: #0d0a4d0d;
   --kd-bg-overlay: #0d0a4d1a;
   --kd-bg-black: #000000de;
@@ -35,6 +35,8 @@
   --kd-shadow-md: 0 0 0 3px rgba(139, 124, 246, 0.2);
   --kd-shadow-lg: 2px 2px 8px 0px #00000026;
   --kd-shadow-color: #00000026;
+
+  
 }
 
 body {
@@ -387,4 +389,15 @@ textarea.kd-border-primary:focus {
  
 .kd-nav-btn-wrapper-active .kd-nav-btn-label {
   color: var(--kd-accent-primary);
+}
+
+/*==========Editor Footer CSS===============*/
+.kd-footer-symbol-icon {
+  color: #616161;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.kd-footer-symbol-icon:hover {
+  color: var(--kd-bg-secondary);
 }
