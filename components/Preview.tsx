@@ -2,6 +2,24 @@
 
 import React, { useState } from "react";
 
+const FONTS = [
+  {
+    title: "Landscape",
+    sub: "16:9",
+    height: "h-[90px]",
+  },
+  {
+    title: "Square",
+    sub: "1:1",
+    height: "h-[130px]",
+  },
+  {
+    title: "Portrait",
+    sub: "4:5",
+    height: "h-[170px]",
+  },
+];
+
 const LAYERS = [
   "Text",
   "Shape 1",
@@ -13,10 +31,8 @@ const LAYERS = [
   "Group 1",
 ];
 
-export default function Preview() {
-  const [activePage, setActivePage] = useState(0);
+export default function Preview() {  
   const [tab, setTab] = useState("layers");
-
   return (
     <div className="h-full w-full flex flex-col bg-[#fcfcfc] overflow-hidden border-l border-l-[#cfcfcf]">
       {/* 🔥 TABS */}
@@ -124,10 +140,10 @@ export default function Preview() {
       </div>
 
       {/* 🔥 CONTENT */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden p-2 ">
+      <div className="flex-1 overflow-hidden ">
         {/* Layers View */}
         {tab === "layers" && (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 px-3">
             {LAYERS.map((item, i) => (
               <div
                 key={i}
@@ -151,81 +167,19 @@ export default function Preview() {
                 <div className="flex items-center w-full min-w-0">
                   {/* LEFT ICON */}
                   <span
-                    className="
-                      bg-[var(--kd-bg-secondary)]
-                      w-[26px]
-                      h-[26px]
-                      flex
-                      items-center
-                      justify-center
-                      rounded-l-[5px]
-                      shrink-0
-                    "
-                  >
-                    <svg
-                      className="w-[12px] h-[12px]"
-                      viewBox="0 0 6 10"
-                      fill="none"
-                    >
-                      <circle
-                        cx="0.948611"
-                        cy="0.948611"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
-                      <circle
-                        cx="4.7428"
-                        cy="0.948611"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
-                      <circle
-                        cx="0.948611"
-                        cy="4.74317"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
-                      <circle
-                        cx="4.7428"
-                        cy="4.74317"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
-                      <circle
-                        cx="0.948611"
-                        cy="8.53739"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
-                      <circle
-                        cx="4.7428"
-                        cy="8.53739"
-                        r="0.948611"
-                        fill="white"
-                        fillOpacity="0.8"
-                      />
+                    className="bg-[var(--kd-bg-secondary)] w-[26px] h-[26px] flex items-center justify-center rounded-l-[5px] shrink-0">
+                    <svg className="w-[12px] h-[12px]" viewBox="0 0 6 10" fill="none">
+                      <circle cx="0.948611" cy="0.948611" r="0.948611" fill="white" fillOpacity="0.8"/>
+                      <circle cx="4.7428"   cy="0.948611" r="0.948611" fill="white" fillOpacity="0.8"/>
+                      <circle cx="0.948611" cy="4.74317"  r="0.948611" fill="white" fillOpacity="0.8"/>
+                      <circle cx="4.7428"   cy="4.74317"  r="0.948611" fill="white" fillOpacity="0.8"/>
+                      <circle cx="0.948611" cy="8.53739"  r="0.948611" fill="white" fillOpacity="0.8"/>
+                      <circle cx="4.7428"   cy="8.53739"  r="0.948611" fill="white" fillOpacity="0.8"/>
                     </svg>
                   </span>
 
                   {/* TEXT */}
-                  <span
-                    className="
-                      text-[9.96px]
-                      lg:text-[10px]
-                      text-gray-600
-                      text-right
-                      flex-1
-                      px-2
-                      kd-font-inter
-                      truncate
-                      min-w-0
-                    "
-                  >
+                  <span className="text-[9.96px] lg:text-[10px] text-gray-600 text-right flex-1 px-2 kd-font-inter truncate   min-w-0">
                     {item}
                   </span>
                 </div>
@@ -236,10 +190,53 @@ export default function Preview() {
 
         {/* Pages View */}
         {tab === "pages" && (
-          <div className="text-gray-400 text-[10px] p-1">
-            Pages content here...
-          </div>
-        )}
+  <div className="text-gray-400 text-[10px] p-1">
+    
+    {/* Font combinations */}
+    <div className="grid gap-2">
+      {FONTS.map((f, i) => (
+        <button
+          key={i}
+          className={`
+            flex flex-col items-start justify-center
+            border border-[#cfcfcf]
+            w-full rounded-[8px]
+            px-3
+            ${f.height}
+          `}
+        >
+          <span
+            style={{
+              fontSize: 17,
+              fontWeight: 400,
+              color: "black",
+              lineHeight: 1,
+            }}
+          >
+            {f.title}
+          </span>
+
+          <span
+            style={{
+              fontSize: 14,
+              fontWeight: 400,
+              color: "#5C0484",
+            }}
+          >
+            {f.sub}
+          </span>
+        </button>
+      ))}
+      {/* ➕ Add New Page Button */}
+      <button className="w-[80%]  mx-auto mt-2 bg-[#f7f7f7] border border-[#C5A8FF] rounded-[5px] text-[#8051E0] p-1 text-[10px] font-medium hover:bg-[#8051E0] hover:text-white transition-all flex items-center justify-center gap-1">
+        <svg width="10" height="10" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
+          <path d="M7.875 2.1875C7.875 1.70352 7.48398 1.3125 7 1.3125C6.51602 1.3125 6.125 1.70352 6.125 2.1875V6.125H2.1875C1.70352 6.125 1.3125 6.51602 1.3125 7C1.3125 7.48398 1.70352 7.875 2.1875 7.875H6.125V11.8125C6.125 12.2965 6.51602 12.6875 7 12.6875C7.48398 12.6875 7.875 12.2965 7.875 11.8125V7.875H11.8125C12.2965 7.875 12.6875 7.48398 12.6875 7C12.6875 6.51602 12.2965 6.125 11.8125 6.125H7.875V2.1875Z" fill="currentColor" />
+        </svg>
+        <span>Add New</span>
+      </button>
+    </div>
+  </div>
+  )}
       </div>
     </div>
   );
