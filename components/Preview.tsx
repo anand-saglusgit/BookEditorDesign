@@ -143,7 +143,7 @@ export default function Preview() {
       <div className="flex-1 overflow-hidden ">
         {/* Layers View */}
         {tab === "layers" && (
-          <div className="flex flex-col gap-2 px-3">
+          <div className="flex flex-col gap-2 px-1">
             {LAYERS.map((item, i) => (
               <div
                 key={i}

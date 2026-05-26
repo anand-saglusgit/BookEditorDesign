@@ -8,9 +8,7 @@ export default function MainCanvas({ }) {
     <div>
       <BannerPageTool/>
     </div>
-     <div
-      className="w-[400px] h-[450px] flex items-center justify-center relative overflow-auto bg-amber-500"
-    >
+     <div className="text-white w-[400px] h-[450px] flex items-center justify-center relative overflow-auto bg-[var(--kd-bg-secondary)]">
       main canwas
     </div>
    </div>

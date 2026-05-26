@@ -3,10 +3,7 @@
 import React, { useState } from "react";
 import { CamelCaseIcon, GradBgIcon, ListItemsIcon, TextAlignmentIcon, TextBoldIcon, TextColorIcon, TextItalicIcon, TextLetterSpaceIcon, TextStrikeIcon, TextUnderlineIcon, TextUndrelineIcon,} from "@/lib/icon/icons";
 export default function CanvasHeaderBar() {
-  const [fontSize, setFontSize] = useState(16);
-  const [showFonts, setShowFonts] = useState(false);
-  const [selectedFont, setSelectedFont] = useState("Playpen Sans");
-  const fonts = [ "Playpen Sans", "Poppins", "Inter", "Roboto", "Montserrat", "Open Sans",];
+  const [fontSize, setFontSize] = useState(16);      
   const iconBtn = "h-7.5 w-7.5 flex items-center justify-center rounded-md border border-[#e8e8e8] hover:bg-[var(--kd-bg-secondary)] text-black hover:text-white transition-all duration-150";
 
   return (
@@ -62,7 +59,7 @@ export default function CanvasHeaderBar() {
 
         {/* Position */}
         <button type="button" className="px-3 py-1 text-sm rounded-md text-black hover:bg-[#8051E0] hover:text-white transition-all duration-200">
-          <span style={{ fontFamily: selectedFont }}>Potion</span>
+          <span>Potion</span>
         </button>
       </div>
     </div>
