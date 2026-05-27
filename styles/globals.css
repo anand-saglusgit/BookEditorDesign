@@ -11,8 +11,9 @@
   --kd-bg-overlay: #0d0a4d1a;
   --kd-bg-black: #000000de;
   --kd-bg-disabled: #eae9ff;
-  --kd-bg-placeholderbg: #aaa6a60e;
+  --kd-bg-placeholderbg: #aaa6a60e;  
   --kd-bg-text:#f2f2f2;
+  --kd-bg-muted: #e8e8e8;
 
   --kd-text-primary: #0d0a4d;
   --kd-text-secondary: #ffffff;
@@ -34,6 +35,7 @@
 
   --kd-border-primary: #0d0a4d26;
   --kd-border-secondary: #6e67e3;
+  --kd-border-muted: #e8e8e8;
   --kd-border-tertiary: #ffffff4d;
 
   --kd-divider: #0d0a4d26;
@@ -62,6 +64,9 @@ body {
 }
 .kd-bg-tertiary {
   background-color: var(--kd-bg-primary);
+}
+.kd-bg-muted {
+  background-color: var(--kd-bg-muted);
 }
 
 /* RESET RANGE */
@@ -445,3 +450,29 @@ textarea.kd-border-primary:focus {
   scrollbar-color: var(--kd-bg-secondary) transparent;
 }
 
+
+/*Canvas Headerbar Tool Start*/
+.kd-canheadbar-primary{
+  background-color: var(--kd-bg-primary);
+  box-shadow: 0px 2px 10px 4px rgba(0,0,0,0.1);
+}
+.kd-canheadbar-primary > div > button{
+  border:1px solid;
+  border-color:var(--kd-border-muted);
+  color:var(--kd-text-black);
+}
+.kd-canheadbar-primary > div > .kd-bg-text-muted-none {
+  background: none !important;  
+  color:var(--kd-text-black) !important; 
+}
+.kd-canheadbar-primary > div > .kd-border-muted-none{
+  border:none !important;
+  border-color:none !important;
+  color:none !important;  
+}
+.kd-canheadbar-primary > div > button:hover{
+  color:var(--kd-text-secondary);
+  background:var(--kd-bg-secondary);
+}
+
+/*Canvas Headerbar Tool End  */

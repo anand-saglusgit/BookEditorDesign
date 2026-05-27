@@ -1,64 +1,64 @@
 "use client";
 
 import React, { useState } from "react";
-import { CamelCaseIcon, GradBgIcon, ListItemsIcon, TextAlignmentIcon, TextBoldIcon, TextColorIcon, TextItalicIcon, TextLetterSpaceIcon, TextStrikeIcon, TextUnderlineIcon, TextUndrelineIcon,} from "@/lib/icon/icons";
+import {CamelCaseIcon, GradBgIcon, ListItemsIcon, TextAlignmentIcon, TextBoldIcon, TextColorIcon, TextItalicIcon, TextLetterSpaceIcon, TextStrikeIcon, TextUnderlineIcon,} from "@/lib/icon/icons";
 export default function CanvasHeaderBar() {
   const [fontSize, setFontSize] = useState(16);      
-  const iconBtn = "h-7.5 w-7.5 flex items-center justify-center rounded-md border border-[#e8e8e8] hover:bg-[var(--kd-bg-secondary)] text-black hover:text-white transition-all duration-150";
+  const iconBtn = "h-7.5 w-7.5 flex items-center justify-center rounded-md transition-all duration-150";
 
   return (
-    <div className="h-10 mt-4 flex items-center justify-between px-1 py-1 bg-white rounded-lg text-gray-700 shadow-[0px_2px_10px_4px_rgba(0,0,0,0.1)]" >
+    <div className="kd-canheadbar-primary h-10 mt-4 flex items-center justify-between px-1 py-1 rounded-lg">
       
       {/* LEFT */}
       <div className="flex items-center gap-1">
         {/* Font Name */}
-        <button type="button" className="px-4 py-1 border border-[#e8e8e8] rounded-md text-sm font-medium hover:text-white hover:bg-[var(--kd-bg-secondary)] transition-all duration-200 cursor-pointer">
+        <button type="button" className="px-4 py-1 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer">
           Playpen Sans
         </button>     
-        {/* Font Size */}
-        <div className="flex items-center gap-2 px-2 py-1 border border-[#e8e8e8] rounded-md text-sm">          
-          <button type="button" onClick={() => setFontSize((f) => Math.max(8, f - 1)) } className="text-black hover:text-black">
-            -
+        {/* Font Size */}        
+          <button type="button" className="flex items-center gap-2 px-3 py-1 rounded-md text-sm kd-bg-text-muted-none"
+          >
+            <span className="cursor-pointer" onClick={() => setFontSize((f) => Math.max(8, f - 1))}>
+              -
+            </span>
+
+            <span className="px-2 "> {fontSize}</span>
+            <span className="cursor-pointer" onClick={() => setFontSize((f) => Math.min(72, f + 1))}>
+              +
+            </span>
           </button>
-          <span className="bg-[#e8e8e8] px-2 rounded text-black">
-            {fontSize}
-          </span>
-          <button type="button" onClick={() => setFontSize((f) => Math.min(72, f + 1)) } className="text-black hover:text-black">
-            +
-          </button>
-        </div>
         {/* Gradient Background */}
-        <button type="button" className={iconBtn}><GradBgIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><GradBgIcon /></button>
 
         {/* Text Color */}
-        <button type="button" className={iconBtn}><TextColorIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextColorIcon /></button>
 
         {/* Bold */}
-        <button type="button" className={iconBtn} ><TextBoldIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextBoldIcon /></button>
 
         {/* Italic */}
-        <button type="button" className={iconBtn}><TextItalicIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextItalicIcon /></button>
 
         {/* Underline */}
-        <button type="button" className={iconBtn}><TextUnderlineIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextUnderlineIcon /></button>
 
         {/* Strike */}
-        <button type="button" className={iconBtn}><TextStrikeIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextStrikeIcon /></button>
 
         {/* Camel Case */}
-        <button type="button" className={iconBtn}><CamelCaseIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><CamelCaseIcon /></button>
 
         {/* Text Alignment */}
-        <button type="button" className={iconBtn}><TextAlignmentIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextAlignmentIcon /></button>
 
         {/* List Items */}
-        <button type="button" className={iconBtn}><ListItemsIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><ListItemsIcon /></button>
 
         {/* Letter Spacing */}
-        <button type="button" className={iconBtn}><TextLetterSpaceIcon /></button>
+        <button type="button" className={`${iconBtn} cursor-pointer`}><TextLetterSpaceIcon /></button>
 
         {/* Position */}
-        <button type="button" className="px-3 py-1 text-sm rounded-md text-black hover:bg-[#8051E0] hover:text-white transition-all duration-200">
+        <button type="button" className="px-3 py-1 text-sm rounded-md transition-all duration-200 kd-border-muted-none cursor-pointer">
           <span>Potion</span>
         </button>
       </div>
