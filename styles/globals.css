@@ -21,6 +21,8 @@
   --kd-text-muted: #9a9a9a;
   --kd-text-red: #dc2626;
   --kd-text-black:#333333;
+  --kd-text-dark:#333333;
+  --kd-text-light:#ffffff;
 
   --kd-accent-primary: #7069e8;
   --kd-accent-secondary: #6e67e3;
@@ -452,27 +454,48 @@ textarea.kd-border-primary:focus {
 
 
 /*Canvas Headerbar Tool Start*/
-.kd-canheadbar-primary{
+.kd-canvasheader-container{
   background-color: var(--kd-bg-primary);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0px 2px 10px 4px rgba(0,0,0,0.1);
 }
-.kd-canheadbar-primary > div > button{
-  border:1px solid;
-  border-color:var(--kd-border-muted);
-  color:var(--kd-text-black);
+
+.kd-canvasheader-fontfamily-button{
+  border:1px solid var(--kd-border-muted);  
+  color:var(--kd-text-dark);
+  background:unset;
 }
-.kd-canheadbar-primary > div > .kd-bg-text-muted-none {
-  background: none !important;  
-  color:var(--kd-text-black) !important; 
-}
-.kd-canheadbar-primary > div > .kd-border-muted-none{
-  border:none !important;
-  border-color:none !important;
-  color:none !important;  
-}
-.kd-canheadbar-primary > div > button:hover{
+.kd-canvasheader-fontfamily-button:hover{
+  border:1px solid var(--kd-border-muted);
   color:var(--kd-text-secondary);
   background:var(--kd-bg-secondary);
 }
 
+.kd-canvasheader-fontsize-button{  
+  background: unset;  
+  border:1px solid var(--kd-border-muted);
+  color:var(--kd-text-dark);
+}
+.kd-canvasheader-fontsize-button:hover{
+  border:1px solid;
+  border-color:var(--kd-border-muted);
+}
+.kd-canvasheader-button-all{
+  border:1px solid var(--kd-border-muted);  
+  color:var(--kd-text-dark);
+}
+.kd-canvasheader-button-all:hover{
+  color:var(--kd-text-secondary);
+  background:var(--kd-bg-secondary);
+}
+.kd-canvasheader-nullText-button{      
+  border:1px solid transparent;
+  color:var(--kd-text-dark);
+  background:unset;
+}
+.kd-canvasheader-nullText-button:hover{
+  border:1px solid transparent;
+  background:var(--kd-bg-secondary);
+  color:var(--kd-text-secondary);
+}
 /*Canvas Headerbar Tool End  */
